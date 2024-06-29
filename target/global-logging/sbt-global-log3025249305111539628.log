@@ -1,0 +1,123 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.5.4 (AdoptOpenJDK Java 1.8.0_275)
+[debug]       Load.loadUnit: plugins took 294.315071ms
+[debug]       Load.loadUnit: defsScala took 0.495688ms
+[debug] [Loading] Scanning directory /Users/marshmello/.sbt/1.0/plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /Users/marshmello/.sbt/1.0/plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 28.795758 ms
+[debug]           Load.resolveProject(global-plugins) took 82.44789ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: /Users/marshmello/.sbt/1.0/plugins, plugins: List(<none>))) took 155.791507ms
+[debug] [Loading] Done in /Users/marshmello/.sbt/1.0/plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 195.566352ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.296114ms
+[debug]     Load.loadUnit(file:/Users/marshmello/.sbt/1.0/plugins/, ...) took 503.975059ms
+[debug]   Load.apply: load took 2310.987034ms
+[debug]   Load.apply: resolveProjects took 9.649291ms
+[debug]   Load.apply: finalTransforms took 84.920571ms
+[debug]   Load.apply: config.delegates took 19.478846ms
+[debug]   Load.apply: Def.make(settings)... took 931.929907ms
+[debug]   Load.apply: structureIndex took 198.271096ms
+[debug]   Load.apply: mkStreams took 2.670484ms
+[info] loading global plugins from /Users/marshmello/.sbt/1.0/plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 6878.669355ms
+[debug]           Load.loadUnit: plugins took 40.535746ms
+[debug]           Load.loadUnit: defsScala took 0.005306ms
+[debug] [Loading] Scanning directory /Users/marshmello/Downloads/SparkTestStarter/project
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /Users/marshmello/Downloads/SparkTestStarter/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 4.666103 ms
+[debug]               Load.resolveProject(sparkteststarter-build) took 4.279282ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id sparkteststarter-build, base: /Users/marshmello/Downloads/SparkTestStarter/project, plugins: List(<none>))) took 9.975067ms
+[debug] [Loading] Done in /Users/marshmello/Downloads/SparkTestStarter/project, returning: (sparkteststarter-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 12.46783ms
+[debug]           Load.loadUnit: cleanEvalClasses took 0.022664ms
+[debug]         Load.loadUnit(file:/Users/marshmello/Downloads/SparkTestStarter/project/, ...) took 53.992288ms
+[debug]       Load.apply: load took 56.305327ms
+[debug]       Load.apply: resolveProjects took 0.155251ms
+[debug]       Load.apply: finalTransforms took 14.117115ms
+[debug]       Load.apply: config.delegates took 0.505243ms
+[debug]       Load.apply: Def.make(settings)... took 145.621851ms
+[debug]       Load.apply: structureIndex took 46.567698ms
+[debug]       Load.apply: mkStreams took 0.004249ms
+[info] loading project definition from /Users/marshmello/Downloads/SparkTestStarter/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 611.754735ms
+[debug]     Load.loadUnit: defsScala took 0.007537ms
+[debug] [Loading] Scanning directory /Users/marshmello/Downloads/SparkTestStarter
+[debug]       Load.loadUnit: mkEval took 15.891712ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /Users/marshmello/Downloads/SparkTestStarter, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 1.746163 ms
+[info] loading settings for project sparkteststarter from build.sbt ...
+[debug]         Load.resolveProject(sparkteststarter) took 5.783266ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id sparkteststarter, base: /Users/marshmello/Downloads/SparkTestStarter, plugins: List(<none>))) took 8.147218ms
+[debug] [Loading] Done in /Users/marshmello/Downloads/SparkTestStarter, returning: (sparkteststarter)
+[debug]     Load.loadUnit: loadedProjectsRaw took 3743.751233ms
+[debug]     Load.loadUnit: cleanEvalClasses took 19.67862ms
+[debug]   Load.loadUnit(file:/Users/marshmello/Downloads/SparkTestStarter/, ...) took 4376.185769ms
+[debug] Load.apply: load took 4378.773713ms
+[debug] Load.apply: resolveProjects took 0.154338ms
+[debug] Load.apply: finalTransforms took 19.31637ms
+[debug] Load.apply: config.delegates took 1.88409ms
+[debug] Load.apply: Def.make(settings)... took 176.788251ms
+[debug] Load.apply: structureIndex took 34.823711ms
+[debug] Load.apply: mkStreams took 0.003309ms
+[info] set current project to SparkTest (in build file:/Users/marshmello/Downloads/SparkTestStarter/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(shell, None, None)
+[info] sbt server started at local:///Users/marshmello/.sbt/1.0/server/45c6e624c729ad367f18/sock
+[debug] Writing bsp connection file
+[info] started sbt server

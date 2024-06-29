@@ -1,0 +1,11 @@
+[debug] > Exec(all {file:/C:/brenda_tai/OrderSparkProject/}ordersparkproject/products {file:/C:/brenda_tai/OrderSparkProject/}ordersparkproject/test:products, None, None)
+[debug] Evaluating tasks: Compile / products, Test / products
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\brenda_tai\OrderSparkProject\target\scala-2.12\classes ...
+[warn] C:\brenda_tai\OrderSparkProject\src\main\scala\order\OrdersMainApp.scala:6:15: imported `OrdersProcessor` is permanently hidden by definition of class OrdersProcessor in package order
+[warn] import order1.OrdersProcessor
+[warn]               ^
+[warn] one warning found
+[info] done compiling
+[success] Total time: 2 s, completed 29-Jun-2024 15:09:28
+[debug] > Exec(idea-shell, None, None)

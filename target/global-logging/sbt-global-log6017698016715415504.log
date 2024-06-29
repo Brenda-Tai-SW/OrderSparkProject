@@ -1,0 +1,12 @@
+[debug] > Exec(all {file:/C:/brenda_tai/OrderSparkProject/}ordersparkproject/products {file:/C:/brenda_tai/OrderSparkProject/}ordersparkproject/test:products, None, None)
+[debug] Evaluating tasks: Compile / products, Test / products
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to C:\brenda_tai\OrderSparkProject\target\scala-2.12\classes ...
+[error] C:\brenda_tai\OrderSparkProject\src\main\scala\order\OrdersProcessor.scala:16:17: ')' expected but '.' found.
+[error]     last30DaysDF.write
+[error]                 ^
+[error] one error found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 2 s, completed 29-Jun-2024 13:43:32
+[debug] > Exec(idea-shell, None, None)

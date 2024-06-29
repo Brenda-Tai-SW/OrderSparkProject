@@ -1,0 +1,118 @@
+[debug] > Exec(;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download, resolveSourceClassifiers, insertProjectTransitiveDependencies" ;preferScala2;*/*:dumpStructureTo C:/Users/Owen/AppData/Local/Temp/sbt-structure1.xml; session clear-all ; set ideaPort in Global := 57934, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.5.4 (Oracle Corporation Java 1.8.0_202)
+[debug] Load.defaultLoad until apply took 3.162149ms
+[debug]           Load.loadUnit: plugins took 81.530073ms
+[debug]           Load.loadUnit: defsScala took 0.004665ms
+[debug] [Loading] Scanning directory C:\brenda_tai\OrderSparkProject\project
+[debug]             Load.loadUnit: mkEval took 0.851886ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\brenda_tai\OrderSparkProject\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 7.500423 ms
+[info] loading settings for project ordersparkproject-build from idea.sbt ...
+[debug]               Load.resolveProject(ordersparkproject-build) took 29.649929ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id ordersparkproject-build, base: C:\brenda_tai\OrderSparkProject\project, plugins: List(<none>))) took 38.001772ms
+[debug] [Loading] Done in C:\brenda_tai\OrderSparkProject\project, returning: (ordersparkproject-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 88.598955ms
+[debug]           Load.loadUnit: cleanEvalClasses took 4.707301ms
+[debug]         Load.loadUnit(file:/C:/brenda_tai/OrderSparkProject/project/, ...) took 177.228702ms
+[debug]       Load.apply: load took 183.860443ms
+[debug]       Load.apply: resolveProjects took 0.16142ms
+[debug]       Load.apply: finalTransforms took 17.176283ms
+[debug]       Load.apply: config.delegates took 0.783773ms
+[debug]       Load.apply: Def.make(settings)... took 191.804538ms
+[debug]       Load.apply: structureIndex took 38.224774ms
+[debug]       Load.apply: mkStreams took 0.002799ms
+[info] loading project definition from C:\brenda_tai\OrderSparkProject\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 1569.467208ms
+[debug]     Load.loadUnit: defsScala took 0.008398ms
+[debug] [Loading] Scanning directory C:\brenda_tai\OrderSparkProject
+[debug]       Load.loadUnit: mkEval took 1.239574ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\brenda_tai\OrderSparkProject, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.StructurePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.IdeaShellPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.StructurePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.IdeaShellPlugin)))
+[debug] Clause(And(Set(Atom(sbt.plugins.CorePlugin), Atom(sbt.plugins.JvmPlugin))),Set(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.SemanticdbPlugin,org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin,sbt.plugins.JUnitXmlReportPlugin,org.jetbrains.sbt.IdeaShellPlugin,org.jetbrains.sbt.StructurePlugin,sbt.plugins.MiniDependencyTreePlugin)
+[debug] Plugins.deducer#function took 7.719694 ms
+[info] loading settings for project ordersparkproject from build.sbt ...
+[debug]         Load.resolveProject(ordersparkproject) took 78.886707ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id ordersparkproject, base: C:\brenda_tai\OrderSparkProject, plugins: List(<none>))) took 88.870477ms
+[debug] [Loading] Done in C:\brenda_tai\OrderSparkProject, returning: (ordersparkproject)
+[debug]     Load.loadUnit: loadedProjectsRaw took 616.697435ms
+[debug]     Load.loadUnit: cleanEvalClasses took 19.201961ms
+[debug]   Load.loadUnit(file:/C:/brenda_tai/OrderSparkProject/, ...) took 2206.615507ms
+[debug] Load.apply: load took 2209.666154ms
+[debug] Load.apply: resolveProjects took 0.150223ms
+[debug] Load.apply: finalTransforms took 63.189796ms
+[debug] Load.apply: config.delegates took 0.532312ms
+[debug] Load.apply: Def.make(settings)... took 159.642805ms
+[debug] Load.apply: structureIndex took 37.543638ms
+[debug] Load.apply: mkStreams took 0.003266ms
+[warn] Discarding 1 session setting.  Use 'session save' to persist session settings.
+[info] set current project to SparkTest (in build file:/C:/brenda_tai/OrderSparkProject/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download, resolveSourceClassifiers, insertProjectTransitiveDependencies", None, None)
+[info] Defining Global / sbtStructureOptions
+[info] The new value will be used by Global / ssOptions
+[debug] Defining 
+[debug] 	Global / sbtStructureOptions
+[debug] 
+[debug] The new value will be used by 
+[debug] 	Global / ssOptions
+[info] Reapplying settings...
+[info] set current project to SparkTest (in build file:/C:/brenda_tai/OrderSparkProject/)
+[debug] > Exec(preferScala2, None, None)
+[debug] > Exec(*/*:dumpStructureTo C:/Users/Owen/AppData/Local/Temp/sbt-structure1.xml, None, None)
+[debug] Evaluating tasks: Global / dumpStructureTo
+[warn] sbt 0.13 shell syntax is deprecated; use slash syntax instead: Global / dumpStructureTo
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] Writing structure to C:\Users\Owen\AppData\Local\Temp\sbt-structure1.xml...
+[info] Done.
+[success] Total time: 31 s, completed 29-Jun-2024 17:05:56
+[debug] > Exec(session clear-all, None, None)
+[info] Reapplying settings...
+[info] set current project to SparkTest (in build file:/C:/brenda_tai/OrderSparkProject/)
+[debug] > Exec(set ideaPort in Global := 57934, None, None)
+[info] Defining Global / ideaPort
+[info] The new value will be used by no settings or tasks.
+[debug] Defining 
+[debug] 	Global / ideaPort
+[debug] 
+[debug] The new value will be used by no settings or tasks.
+[info] Reapplying settings...
+[info] set current project to SparkTest (in build file:/C:/brenda_tai/OrderSparkProject/)
+[debug] > Exec(idea-shell, None, None)
