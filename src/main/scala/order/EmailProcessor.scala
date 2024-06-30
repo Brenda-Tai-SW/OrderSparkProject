@@ -1,7 +1,10 @@
 package order
 
-import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession,Row}
+
+import org.apache.logging.log4j.{LogManager, Logger}
+import org.apache.spark.sql.{DataFrame, Row, SaveMode, SparkSession}
 import org.apache.spark.sql.functions._
+
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Properties
@@ -15,6 +18,8 @@ import org.quartz.impl.StdSchedulerFactory
 import org.quartz.CronScheduleBuilder.cronSchedule
 
 class EmailProcessor {
+
+  private val logger: Logger = LogManager.getLogger(getClass.getName)
 
   def getLastCalendarMonth: (String, String) = {
     val now = LocalDate.now
@@ -57,18 +62,20 @@ class EmailProcessor {
         col("total amount"),
         col("date")
       )).as("orders"),
+      first("email").as("email"),
       first("number_of_orders").as("number_of_orders"),
       first("monthly_total_amount").as("monthly_total_amount")
     )
 
     customerGroups.collect().foreach { row =>
       val customer = row.getAs[String]("customer")
+      val customerEmail = row.getAs[String]("email")
       val numberOfOrders = row.getAs[Long]("number_of_orders")
       val monthTotalAmount = row.getAs[Double]("monthly_total_amount")
       val orders = row.getAs[Seq[Row]]("orders")
 
       val emailContent = buildEmailContent(customer, numberOfOrders, monthTotalAmount, orders)
-      sendEmail(customer, emailContent)
+      sendEmail(customerEmail, emailContent)
     }
   }
 
@@ -92,7 +99,7 @@ class EmailProcessor {
 
   def sendEmail(customerEmail: String, emailContent: String): Unit = {
     val fromEmail = "Brenda.Tai101.Sweden@gmail.com"
-    val fromPassword = "exclxfmudrzndstq"
+    val fromPassword = "exclxfmudrzndstq" //app application password
 
     val props = new Properties()
     props.put("mail.smtp.auth", "true")
@@ -109,16 +116,17 @@ class EmailProcessor {
     try {
       val message = new MimeMessage(session)
       message.setFrom(new InternetAddress(fromEmail))
-      message.setRecipient(Message.RecipientType.TO, InternetAddress.parse("Brenda.Tai101.Sweden@gmail.com").head)
+      message.setRecipient(Message.RecipientType.TO, InternetAddress.parse(customerEmail).head)
       message.setSubject("Monthly Order Summary")
       message.setText(emailContent)
 
       Transport.send(message)
-      println(s"Email sent successfully to $customerEmail")
+      logger.info(s"Email sent successfully to $customerEmail")
+
     } catch {
       case e: Exception =>
         e.printStackTrace()
-        println(s"Failed to send email to $customerEmail")
+        logger.error(s"Failed to send email to $customerEmail")
     }
   }
 
@@ -157,13 +165,14 @@ class EmailProcessor {
 
     val trigger: Trigger = TriggerBuilder.newTrigger()
       .withIdentity("trigger1", "group1")
-      //.withSchedule(cronSchedule("0 0 9 1 * ?"))  // Triggered at 9am on the 1st of the month
-      .withSchedule(cronSchedule("0 55 17 ? * *"))
+      .withSchedule(cronSchedule("0 0 9 1 * ?"))  // Triggered at 9am on the 1st of the month
+     //.withSchedule(cronSchedule("0 55 17 ? * *"))
       .forJob("emailJob", "group1")
       .build()
 
     scheduler.scheduleJob(jobDetail, trigger)
-   // scheduler.triggerJob(jobDetail.getKey)
+    logger.info(s"Schedule job  successfully at the 1st of the month")
+
   }
 
 }
@@ -172,12 +181,8 @@ class EmailProcessor {
 class EmailJob extends Job {
   def execute(context: JobExecutionContext): Unit = {
     val ordersDF = context.getMergedJobDataMap.get("ordersDF").asInstanceOf[DataFrame]
-
-    println(s"Sending email to customer -----EmailJob111")
-
     val emailProcessor = new EmailProcessor()
         emailProcessor.sendEmails(ordersDF)
 
-    println(s" after Sending email to customer -----EmailJob222")
   }
 }

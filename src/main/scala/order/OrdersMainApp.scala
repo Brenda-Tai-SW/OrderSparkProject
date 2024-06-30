@@ -3,9 +3,14 @@ package order
 
 import org.apache.spark.sql.{SaveMode, SparkSession}
 import org.apache.hadoop.fs.{FileSystem, Path}
-
+import org.apache.logging.log4j.LogManager
+import org.apache.logging.log4j.Logger
 
 object OrdersMainApp extends App {
+
+  private val logger: Logger = LogManager.getLogger(getClass.getName)
+
+
   val spark = SparkSession.builder()
     .appName("order main app")
     .master("local[*]")
@@ -21,8 +26,6 @@ object OrdersMainApp extends App {
     azureStorageUploader.uploadFileToStorage(storageConnectionString,containerName)
 
 
-  //val bronzePath = s"https://taimystorage.blob.core.windows.net/$containerName/bronze/sourcefile.csv"
-
   val bronzePath = s"wasbs://$containerName@$storageAccountName.blob.core.windows.net/bronze/sourceFile.csv"
 
   spark.conf.set(s"fs.azure.account.key.$storageAccountName.blob.core.windows.net", storageAccountKey)
@@ -36,37 +39,37 @@ object OrdersMainApp extends App {
 
   val silverPath = s"wasbs://$containerName@$storageAccountName.blob.core.windows.net/silver"
 
+  logger.info(s"before uplode file to $silverPath" + silverDF.count())
 
-  println(s"before uplode file to $silverPath")
+  silverDF.write.mode("append").option("header", "true").csv(silverPath)
 
-    silverDF.write.mode("append").option("header", "true").csv(silverPath)
+  logger.info(s" after uplode file to $silverPath"+ silverDF.count())
 
-  println(s" after uplode file to $silverPath")
+
 
   val ordersProcessor = new OrdersProcessor()
   val goldenLast30DaysDF= ordersProcessor.computeDailySalesTrendLast30Days(silverDF)
   val goldenLast30DaysPath = s"wasbs://$containerName@$storageAccountName.blob.core.windows.net/golden/Last30Days"
 
 
-     goldenLast30DaysDF.write.mode("append").option("header", "true").csv(goldenLast30DaysPath)
+     goldenLast30DaysDF.coalesce(1).write.mode("append").option("header", "true").csv(goldenLast30DaysPath)
 
   val goldenLast24MonthDF= ordersProcessor.computeMonthlySalesTrendLast24(silverDF)
 
   val goldenLast24MonthPath = s"wasbs://$containerName@$storageAccountName.blob.core.windows.net/golden/Last24Month"
-    goldenLast24MonthDF.write.mode("append").option("header", "true").csv(goldenLast24MonthPath)
+    goldenLast24MonthDF.coalesce(1).write.mode("append").option("header", "true").csv(goldenLast24MonthPath)
 
   val productsProcessor = new ProductsProcessor()
   val top10MostSteadilySoldDF=productsProcessor.computeTopSteadyProducts(silverDF)
 
   val top10MostSteadilyPath = s"wasbs://$containerName@$storageAccountName.blob.core.windows.net/golden/top10MostSteadilySold"
 
-    top10MostSteadilySoldDF.write.mode("append").option("header", "true").csv(top10MostSteadilyPath)
-
+    top10MostSteadilySoldDF.coalesce(1).write.mode("append").option("header", "true").csv(top10MostSteadilyPath)
 
 
   val emailProcessor = new EmailProcessor()
-    emailProcessor.sendEmails(silverDF)
-    emailProcessor.scheduleEmailJob(silverDF)
+   emailProcessor.sendEmails(silverDF)// for testing
+   emailProcessor.scheduleEmailJob(silverDF)
 
 
 

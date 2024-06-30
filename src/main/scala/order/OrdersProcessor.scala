@@ -9,6 +9,8 @@ class OrdersProcessor {
 
   def computeDailySalesTrendLast30Days(deduplicatedDataDF: DataFrame): DataFrame = {
 
+    deduplicatedDataDF.show()
+
          deduplicatedDataDF
         .filter(col("date") >= date_sub(current_date(), 30))
         .groupBy("date")

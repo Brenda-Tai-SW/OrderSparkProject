@@ -1,15 +1,18 @@
 package order
 
 import com.microsoft.azure.storage.CloudStorageAccount
-import com.microsoft.azure.storage.blob.{CloudBlobClient, CloudBlobContainer, CloudBlockBlob, BlobContainerPublicAccessType}
+import com.microsoft.azure.storage.blob.{BlobContainerPublicAccessType, CloudBlobClient, CloudBlobContainer, CloudBlockBlob}
+import org.apache.logging.log4j.{LogManager, Logger}
 
 class AzureStorageUploader {
+
+  private val logger: Logger = LogManager.getLogger(getClass.getName)
 
   def uploadFileToStorage(storageConnectionString: String, containerName: String): Unit = {
 
     val bronzeFolderName = "bronze"
     val bronzeFileName="sourceFile.csv"
-    val localFilePath = "C:/order_file/sourceFile/order_list-1(1).csv"
+    val localFilePath = "C:/brenda_tai/OrderSparkProject/sourceFile/order_list-1.csv"
 
 
     val storageAccount = CloudStorageAccount.parse(storageConnectionString)
@@ -22,7 +25,8 @@ class AzureStorageUploader {
     val file = new java.io.File(localFilePath)
     blob.uploadFromFile(file.getAbsolutePath)
 
-    println(s"Local file  uploaded to '$bronzeFolderName' folder in container '$containerName'.")
+    logger.info(s"Local file  uploaded to '$bronzeFolderName' folder in container '$containerName'.")
+
   }
 
 

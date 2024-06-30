@@ -1,0 +1,14 @@
+order_no,customer,email,productId,unit price,quantity,total amount,date
+2020090110031,edwin,zhuozhen.zhao@kylg.org,S10001,9,8,72,2024-06-01
+2020090211039,kane,Kane@kylg.org,S10002,20.9,2,41.8,2024-06-05
+2020080651022,edwin,zhuozhen.zhao@kylg.org,S10003,15,1,15,2024-06-10
+2020090691035,edwin,zhuozhen.zhao@kylg.org,S10004,11,2,22,2024-06-03
+2020070766036,jerry,jerry@kylg.org,S10007,12.4,10,124,2024-06-26
+2020080651022,jerry,jerry@kylg.org,S10007,12.4,10,124,2024-06-26
+2020090110031,edwin,zhuozhen.zhao@kylg.org,S10001,9,8,72,2024-05-01
+2020090211039,kane,Kane@kylg.org,S10002,20.9,2,41.8,2024-05-05
+2020080651022,edwin,zhuozhen.zhao@kylg.org,S10003,15,1,15,2024-05-10
+2020090691035,edwin,zhuozhen.zhao@kylg.org,S10004,11,2,22,2024-05-03
+2020070766036,jerry,jerry@kylg.org,S10007,12.4,10,124,2024-05-26
+2020080651022,jerry,jerry@kylg.org,S10007,12.4,10,124,2024-05-26
+2020080651022,Brenda,brenda.tai@kylg.org,S10007,12.4,10,124,2024-05-26
