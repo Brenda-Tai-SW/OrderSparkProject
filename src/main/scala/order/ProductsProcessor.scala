@@ -4,9 +4,7 @@ import org.apache.spark.sql.functions._
 
 class ProductsProcessor {
 
-  val  top10MostSteadilySold="C:/order_file/golden/top10MostSteadilySold"
-
-  def computeTopSteadyProducts(deduplicatedDataDF: DataFrame): Unit = {
+  def computeTopSteadyProducts(deduplicatedDataDF: DataFrame): DataFrame = {
     val recent6MonthsDF = deduplicatedDataDF
       .filter(col("date") >= date_sub(current_date(), 180))
 
@@ -23,14 +21,11 @@ class ProductsProcessor {
         avg("total_units_sold").as("average_units_sold")
       )
 
-    val rankedProductsDF = productSalesStatsDF
+      productSalesStatsDF
       .orderBy("sales_stddev", "average_units_sold")
       .limit(10)
 
-    rankedProductsDF.write
-      .mode(SaveMode.Overwrite)
-      .option("header", "true")
-      .csv(top10MostSteadilySold)
+
   }
 
 }

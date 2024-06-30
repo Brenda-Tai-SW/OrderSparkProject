@@ -123,7 +123,6 @@ class EmailProcessor {
   }
 
 
-  // Method to convert any value to Double
   def convertToDouble(value: Any): Double = {
     value match {
       case null => 0.0

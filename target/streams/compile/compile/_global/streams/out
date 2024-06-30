@@ -1,11 +1,8 @@
-[0m[[0m[31merror[0m] [0m[0mC:\brenda_tai\OrderSparkProject\src\main\scala\order\EmailProcessor.scala:146:27: not found: type SchedulerFactory[0m
-[0m[[0m[31merror[0m] [0m[0m    val schedulerFactory: SchedulerFactory = new StdSchedulerFactory()[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\brenda_tai\OrderSparkProject\src\main\scala\order\EmailProcessor.scala:158:21: not found: value cronSchedule[0m
-[0m[[0m[31merror[0m] [0m[0m      .withSchedule(cronSchedule("0 05 9 ? * *"))  // Example cron expression[0m
-[0m[[0m[31merror[0m] [0m[0m                    ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\brenda_tai\OrderSparkProject\src\main\scala\order\OrdersMainApp.scala:6:15: imported `OrdersProcessor` is permanently hidden by definition of class OrdersProcessor in package order[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport order1.OrdersProcessor[0m
-[0m[[0m[33mwarn[0m] [0m[0m              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[error] C:\brenda_tai\OrderSparkProject\src\main\scala\order\AzureStorageUploader.scala:19:15: overloaded method value createIfNotExists with alternatives:
+[error]   (x$1: com.microsoft.azure.storage.blob.BlobContainerPublicAccessType,x$2: com.microsoft.azure.storage.blob.BlobRequestOptions,x$3: com.microsoft.azure.storage.OperationContext)Boolean <and>
+[error]   (x$1: com.microsoft.azure.storage.blob.BlobRequestOptions,x$2: com.microsoft.azure.storage.OperationContext)Boolean <and>
+[error]   ()Boolean
+[error]  cannot be applied to (com.microsoft.azure.storage.blob.BlobContainerPublicAccessType)
+[error]     container.createIfNotExists(BlobContainerPublicAccessType.CONTAINER)
+[error]               ^
+[error] one error found

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id="ordersparkproject [file:/C:/brenda_tai/OrderSparkProject/]" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/../../target/scala-2.12/classes" />
     <output-test url="file://$MODULE_DIR$/../../target/scala-2.12/test-classes" />
     <exclude-output />
@@ -43,12 +43,15 @@
     <orderEntry type="library" name="sbt: com.google.code.findbugs:jsr305:3.0.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.google.code.gson:gson:2.2.4:jar" level="project" />
     <orderEntry type="library" name="sbt: com.google.flatbuffers:flatbuffers-java:1.9.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.google.guava:guava:16.0.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.google.guava:guava:20.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.google.inject:guice:4.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.google.protobuf:protobuf-java:2.5.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.google.re2j:re2j:1.1:jar" level="project" />
     <orderEntry type="library" name="sbt: com.mchange:c3p0:0.9.5.4:jar" level="project" />
     <orderEntry type="library" name="sbt: com.mchange:mchange-commons-java:0.2.15:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.microsoft.azure:azure-data-lake-store-sdk:2.2.9:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.microsoft.azure:azure-keyvault-core:1.0.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.microsoft.azure:azure-storage:8.6.5:jar" level="project" />
     <orderEntry type="library" name="sbt: com.nimbusds:nimbus-jose-jwt:4.41.1:jar" level="project" />
     <orderEntry type="library" name="sbt: com.ning:compress-lzf:1.0.3:jar" level="project" />
     <orderEntry type="library" name="sbt: com.squareup.okhttp:okhttp:2.7.5:jar" level="project" />
@@ -67,6 +70,7 @@
     <orderEntry type="library" name="sbt: commons-collections:commons-collections:3.2.2:jar" level="project" />
     <orderEntry type="library" name="sbt: commons-io:commons-io:2.5:jar" level="project" />
     <orderEntry type="library" name="sbt: commons-lang:commons-lang:2.6:jar" level="project" />
+    <orderEntry type="library" name="sbt: commons-logging:commons-logging:1.2:jar" level="project" />
     <orderEntry type="library" name="sbt: commons-net:commons-net:3.6:jar" level="project" />
     <orderEntry type="library" name="sbt: dnsjava:dnsjava:2.1.7:jar" level="project" />
     <orderEntry type="library" name="sbt: io.airlift:aircompressor:0.10:jar" level="project" />
@@ -115,6 +119,8 @@
     <orderEntry type="library" name="sbt: org.apache.curator:curator-recipes:2.13.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.apache.hadoop:hadoop-annotations:3.2.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.apache.hadoop:hadoop-auth:3.2.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.hadoop:hadoop-azure-datalake:3.2.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.hadoop:hadoop-azure:3.2.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.apache.hadoop:hadoop-client:3.2.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.apache.hadoop:hadoop-common:3.2.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.apache.hadoop:hadoop-hdfs-client:3.2.0:jar" level="project" />
@@ -177,6 +183,7 @@
     <orderEntry type="library" name="sbt: org.codehaus.woodstox:stax2-api:3.1.4:jar" level="project" />
     <orderEntry type="library" name="sbt: org.eclipse.jetty:jetty-security:9.3.24.v20180605:jar" level="project" />
     <orderEntry type="library" name="sbt: org.eclipse.jetty:jetty-servlet:9.3.24.v20180605:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.eclipse.jetty:jetty-util-ajax:9.3.24.v20180605:jar" level="project" />
     <orderEntry type="library" name="sbt: org.eclipse.jetty:jetty-util:9.3.24.v20180605:jar" level="project" />
     <orderEntry type="library" name="sbt: org.fusesource.leveldbjni:leveldbjni-all:1.8:jar" level="project" />
     <orderEntry type="library" name="sbt: org.glassfish.hk2.external:aopalliance-repackaged:2.6.1:jar" level="project" />
@@ -227,6 +234,7 @@
     <orderEntry type="library" name="sbt: org.typelevel:spire-platform_2.12:0.17.0-M1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.typelevel:spire-util_2.12:0.17.0-M1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.typelevel:spire_2.12:0.17.0-M1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.wildfly.openssl:wildfly-openssl:1.0.4.Final:jar" level="project" />
     <orderEntry type="library" name="sbt: org.xerial.snappy:snappy-java:1.1.8.2:jar" level="project" />
     <orderEntry type="library" name="sbt: oro:oro:2.0.8:jar" level="project" />
     <orderEntry type="library" name="sbt: pl.edu.icm:JLargeArrays:1.5:jar" level="project" />
