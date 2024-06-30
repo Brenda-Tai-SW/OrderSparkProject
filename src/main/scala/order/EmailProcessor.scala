@@ -99,7 +99,7 @@ class EmailProcessor {
 
   def sendEmail(customerEmail: String, emailContent: String): Unit = {
     val fromEmail = "Brenda.Tai101.Sweden@gmail.com"
-    val fromPassword = "exclxfmudrzndstq" //app application password
+    val fromPassword = "" //app application password,already send successfully,because this is private ,so set null now
 
     val props = new Properties()
     props.put("mail.smtp.auth", "true")
